@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ex9-sample</title>
+  <style>
+    h1 {
+      color: skyblue;
+      text-decoration: underline skyblue;
+    }
+
+    ul {
+      list-style: none;
+    }
+
+    input {
+      font-size: 20px;
+    }
+  </style>
+  <script>
+    function nightDayHandler(self) {
+      var target = document.querySelector('body');
+      if (self.value === 'night') {
+        target.style.backgroundColor = 'black';
+        target.style.color = 'white';
+        self.value = 'day';
+
+        var alist = document.querySelectorAll('a');
+        var i = 0;
+        while (i < alist.length) {
+          alist[i].style.color = 'powderblue';
+          i = i + 1;
+        }
+      } else {
+        target.style.backgroundColor = 'white';
+        target.style.color = 'black';
+        self.value = 'night';
+        var alist = document.querySelectorAll('a');
+        var i = 0;
+        while (i < alist.length) {
+          alist[i].style.color = 'coral';
+          i = i + 1;
+        }
+      }
+    }
+  </script>
+</head>
+
+<body>
+  <h1>WEB</h1>
+  <input id="night_day" type="button" value="night" onclick="
+  nightDayHandler(this);
+  ">
+  <ul>
+    <li><a href="#">1. HTML</a></li>
+    <li><a href="#">2. CSS</a></li>
+    <li><a href="#">3. JavaScript</a></li>
+  </ul>
+
+  <h2>JavaScript</h2>
+  <p>
+    A programming language is said to have First-class functions when functions in that language are treated like any
+    other variable. For example, in such a language, a function can be passed as an argument to other functions, can be
+    returned by another function and can be assigned as a value to a variable.
+  </p>
+</body>
+
+</html>
